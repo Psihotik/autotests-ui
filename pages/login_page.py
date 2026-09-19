@@ -1,4 +1,4 @@
-from pages.best_pages import BasePage
+from pages.base_pages import BasePage
 from playwright.sync_api import Page, expect
 
 
