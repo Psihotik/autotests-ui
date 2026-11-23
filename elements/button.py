@@ -12,7 +12,7 @@ class Button(BaseElement):
     def type_of(self):
         return 'button'
 
-    def check_enable(self, nth: int = 0, **kwargs):
+    def check_enabled(self, nth: int = 0, **kwargs):
         step = f'Checking that {self.type_of} "{self.name}" is enabled'
         with allure.step(step):
             logger.info(step)

@@ -21,7 +21,7 @@ class CreateCourseToolbarViewComponent(BaseComponent):
             self.create_course_title.check_have_text('Create course')
 
         else:
-            self.create_course_button.check_enable()
+            self.create_course_button.check_enabled()
 
     def click_create_course_button(self):
         self.create_course_button.click()
