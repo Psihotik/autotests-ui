@@ -59,7 +59,7 @@ jobs:
           name: allure-results
           path: allure-results
 
-      # Получаем историю отчётов из ветки gh-pages (если она существует).
+      # Получаем историю отчётов из ветки gh-pages.
       - name: Get Allure history
         uses: actions/checkout@v7
         if: always()
