@@ -22,7 +22,7 @@ jobs:
 
       # 2. Шаг для установки Python на виртуальной машине
       - name: Set up Python
-        uses: actions/setup-python@v4  # Используем GitHub Action для установки Python
+        uses: actions/setup-python@v6  # Используем GitHub Action для установки Python
         with:
           python-version: '3.11'  # Устанавливаем версию Python 3.11 (можно заменить на другую версию)
 
@@ -40,7 +40,7 @@ jobs:
 
       # 5. Шаг для получения истории отчётов Allure, если она существует
       - name: Get Allure history
-        uses: actions/checkout@v4  # Опять клонируем репозиторий, чтобы получить историю отчётов
+        uses: actions/checkout@v6 # Опять клонируем репозиторий, чтобы получить историю отчётов
         if: always()  # Всегда выполняем, независимо от успеха или неудачи предыдущих шагов
         continue-on-error: true  # Если здесь возникнет ошибка, workflow всё равно продолжит выполнение
         with:
