@@ -37,6 +37,7 @@ jobs:
       # Сохраняем папку с результатами как артефакт,
       # чтобы передать её в следующую джобу.
       - name: Upload Allure results as artifact
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: allure-results
@@ -47,7 +48,8 @@ jobs:
   # Запускается только после успешного завершения run-tests
   # ------------------------------------------------------------
   publish-report:
-    needs: run-tests
+    if: always()
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
 
     steps:
